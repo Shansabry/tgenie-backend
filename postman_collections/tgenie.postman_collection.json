@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "080be75d-e292-424c-b538-cd8c35b80170",
+		"name": "tgenie",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/api/v1/deployment/user/jason-d/token",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"deployment",
+						"user",
+						"jason-d",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserInfo",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/api/v1/deployment",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"deployment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "renewToken",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/api/v1/deployment/user/renew",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"deployment",
+						"user",
+						"renew"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "newSession",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/api/v1/agent/session",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"agent",
+						"session"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPredictions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"query\": \"Hel\" }"
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/agent/session/6079d1b96fea6c2890634784/completions",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"agent",
+						"session",
+						"6079d1b96fea6c2890634784",
+						"completions"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Imphc29uLWQiLCJuYW1lIjoiSmFzb24iLCJlbWFpbCI6Imphc29uQGFiY29ycC5jb20iLCJkZXBhcnRtZW50IjoicmVmdW5kIiwiaWF0IjoxNjE4NTk1NTM2LCJleHAiOjE2MTg2MDU1MzZ9.WfqQLGvLQJk3tcWVUbaPg7bT4xeERNqOhKEarIfEmoo",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
